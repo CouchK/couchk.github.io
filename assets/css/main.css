@@ -98,7 +98,7 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		color: #a2a2a2;
+		color: #787878;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 400;
@@ -1765,11 +1765,10 @@ input, select, textarea {
 	}
 
 	header p {
-		color: #b2b2b2;
+		color: #d0cfcf;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
-
 	header h2 + p {
 		font-size: 1.25em;
 		margin-top: -1em;
@@ -1895,7 +1894,7 @@ input, select, textarea {
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #a2a2a2;
+			color: #787878;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -2632,7 +2631,7 @@ input, select, textarea {
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: #787878;
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
@@ -3003,6 +3002,7 @@ input, select, textarea {
 
 				#header h1 {
 					font-size: 1.25em;
+					color: #787878;
 				}
 
 					#header h1 br {
