@@ -2027,7 +2027,7 @@ input, select, textarea {
 			}
 
 			ul.icons li .icon:before {
-				font-size: 1.5em;
+				font-size: 2em;
 			}
 
 /* Labeled Icons */
@@ -2267,8 +2267,8 @@ input, select, textarea {
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 0.35em;
-		border: solid 3px #efefef;
-		color: #787878 !important;
+		border: solid 3px #d9d9d9;
+		color: #676767 !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
@@ -2455,8 +2455,8 @@ input, select, textarea {
 
 		#header h1 {
 			color: #787878;
-			font-size: 1.35em;
-			line-height: 1.75em;
+			font-size: 2em;
+			line-height: 2em;
 			margin: 0;
 		}
 
@@ -2824,7 +2824,7 @@ input, select, textarea {
 			}
 
 				#header h1 {
-					font-size: 1.25em;
+					font-size: 1.8em;
 					color: #787878;
 				}
 
