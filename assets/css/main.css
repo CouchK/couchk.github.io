@@ -123,7 +123,7 @@ input, select, textarea {
 
 		a.two:hover {
 			border-bottom-color: transparent;
-			color: #8ea3e2 !important;
+			color: #2faabc !important;
 			text-decoration: none;
 		}
 
@@ -2286,8 +2286,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #8ea3e2;
-			color: #8ea3e2 !important;
+			border-color: #2faabc;
+			color: #2faabc !important;
 		}
 
 		input[type="submit"]:active,
@@ -2295,8 +2295,8 @@ input, select, textarea {
 		input[type="button"]:active,
 		.button:active {
 			background-color: rgba(73, 191, 157, 0.1);
-			border-color: #8ea3e2;
-			color: #8ea3e2 !important;
+			border-color: #2faabc;
+			color: #2faabc !important;
 		}
 
 		input[type="submit"].icon,
@@ -2339,8 +2339,8 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #8ea3e2;
-			border-color: #8ea3e2;
+			background-color: #2faabc;
+			border-color: #2faabc;
 			color: #ffffff !important;
 		}
 
@@ -2348,16 +2348,16 @@ input, select, textarea {
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: #8ea3e2;
-				border-color: #8ea3e2;
+				background-color: #2faabc;
+				border-color: #2faabc;
 			}
 
 			input[type="submit"].primary:active,
 			input[type="reset"].primary:active,
 			input[type="button"].primary:active,
 			.button.primary:active {
-				background-color: #8ea3e2;
-				border-color: #8ea3e2;
+				background-color: #2faabc;
+				border-color: #2faabc;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -2831,6 +2831,10 @@ input, select, textarea {
 					#header h1 br {
 						display: none;
 					}
+
+				#header p {
+					color: white;
+				}
 
 				#header > .inner {
 					margin-bottom: 0;
