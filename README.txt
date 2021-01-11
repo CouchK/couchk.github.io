@@ -1,1 +1,1 @@
-Here is a website set up as my portfolio which includes recent projects and my current resume.
+Here is my portfolio which includes recent projects, current resume, and contact information.
