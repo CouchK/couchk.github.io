@@ -87,3 +87,39 @@ section#home {
     background: url('images/space.jpg') no-repeat center center/
     cover;
 }
+
+/* Icons */
+i {
+    color: #fff;
+    font-size: 2.3rem;
+    cursor: default;
+    list-style: none;
+    opacity: 0.6;
+}
+
+i:hover {
+    color: white;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 1em 1.3em 0 0;
+}
+
+/* Labeled Icons */
+ul.labeled-icons {
+    color: #fff;
+    list-style: none;
+    font-size: 1em;
+}
+
+ul.labeled-icons:hover {
+
+}
+
+/* Resume Button */
+.resumeBtn {
+
+}
