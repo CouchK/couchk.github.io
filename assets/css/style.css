@@ -76,7 +76,8 @@ section {
 
 section h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    padding-top: 1em;
 }
 
 section p {
@@ -153,8 +154,8 @@ ul.labeled-icons i {
     border-radius: 0.35em;
     border: solid 3px #fff;
     opacity: 0.6;
-    width: 30%;
     text-align: center;
+    width: 10px;
 }
 
 .proj-button:hover {
@@ -167,7 +168,6 @@ ul.labeled-icons i {
     color: #fff;
     text-decoration: none;
 }
-
 
 /* Projects */
 .proj-container {
@@ -189,26 +189,142 @@ ul.labeled-icons i {
 }
 
 .proj-section-left {
-    width: 40%;
+    position: relative;
+    width: 46%;
     float: left;
     border: 1px solid red;
     padding-left: 10px;
 }
 
-.proj-section-left img {
-    width: 20px;
-    height: 30px;
-}
-
 .proj-section-right {
-    width: 40%;
+    position: relative;
+    width: 46%;
     float: right;
     border: 1px solid blue;
     padding-left: 10px;
-    padding-right: 10px;
 }
 
-.proj-section-right img {
-    width: 20px;
-    height: 20px;
+/* Carousel - Left Side */
+.slider-left {
+    width: 200px;
+    height: 400px;
+    top: 5px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid pink;
+}
+
+.slides-left {
+    width: 500%;
+    height: 400px;
+    display: flex;
+}
+
+.slides-left input {
+    display: none;
+}
+
+.slide-left {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide-left img {
+    width: 200px;
+    height: 400px;
+}
+
+/* Slider - Right Side */
+.slider-right {
+    width: 350px;
+    height: 250px;
+    top: 5px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid pink;
+}
+
+.slides-right {
+    width: 500%;
+    height: 250px;
+    display: flex;
+}
+
+.slides-right input {
+    display: none;
+}
+
+.slide-right {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide-right img {
+    width: 350px;
+    height: 250px;
+}
+
+/* Slider Buttons */
+.navigation-manual {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    background: gray;
+    border: 2px solid mediumpurple;
+}
+
+.manual-btn {
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: purple;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+     margin-left: -40%;
+ }
+
+#radio4:checked ~ .first{
+    margin-left: 0;
+}
+#radio5:checked ~ .first{
+    margin-left: -20%;
+}
+#radio6:checked ~ .first{
+    margin-left: -40%;
+}
+
+.carousel {
+    align-items: center;
+    display: flex;
+    margin: 2rem auto;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+}
+
+.carousel-images {
+    display: flex;
+    transform: translate(0);
+    transition: 0.25s;
 }
