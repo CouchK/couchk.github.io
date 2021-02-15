@@ -157,16 +157,20 @@ ul.labeled-icons i {
 }
 
 .proj-button {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    margin: 5px auto;
     background-color: transparent;
     border-radius: 0.35em;
     border: solid 3px black;
+    padding: 0.3em;
     opacity: 0.6;
     text-align: center;
-    padding: 0.3em;
-    display: block;
-    margin: 5px auto;
     text-decoration: none;
-    width: 120px;
+    width: 130px;
     color: black;
 }
 
@@ -342,4 +346,82 @@ ul.labeled-icons i {
 
 #radio6:checked ~ .first {
     margin-left: -40%;
+}
+
+
+/* New Carousel */
+.carousel-container-left {
+    width: 195px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.35em;
+}
+
+.carousel-slide-left {
+    width: 500%;
+    height: 400px;
+    display: flex;
+}
+
+.carousel-container-right {
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.35em;
+    justify-content: center;
+    border: 2px solid black;
+}
+
+.carousel-slide-right {
+    width: 500%;
+    height: 250px;
+    display: flex;
+}
+
+#prevBtn1 {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: black;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#nextBtn1 {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: black;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#prevBtn2 {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: black;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#nextBtn2 {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: black;
+    opacity: 0.7;
+    cursor: pointer;
 }

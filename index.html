@@ -7,7 +7,6 @@
 	<title>Portfolio</title>
 	<link rel="stylesheet" href="assets/css/style.css" />
 	<script src="https://kit.fontawesome.com/dfe0d8e5ae.js" crossorigin="anonymous"></script>
-	<script src="assets/js/main.js"></script>
 </head>
 
 <body>
@@ -39,90 +38,56 @@
 			<div class="proj-container">
 				<div class="proj-section-left">
 					<h3>Dog Breed Detector Android Application</h3>
-						<table style="float: left;">
-							<tr>
-								<td>
-								<div class="slider-left">
-									<div class="slides-left">
-										<input type="radio" name="radio-btn" id="radio1">
-										<input type="radio" name="radio-btn" id="radio2">
-										<input type="radio" name="radio-btn" id="radio3">
-
-										<div class="slide-left first">
-											<img src="images/Dog%20Identifier%20Photos/Results.png" alt="">
-										</div>
-										<div class="slide-left">
-											<img src="images/Dog%20Identifier%20Photos/Results2.png" alt="">
-										</div>
-										<div class="slide-left">
-											<img src="images/Dog%20Identifier%20Photos/Corrections.png" alt="">
-										</div>
-
-										<div class="navigation-manual">
-											<label for="radio1" class="slider-btn"></label>
-											<label for="radio2" class="slider-btn"></label>
-											<label for="radio3" class="slider-btn"></label>
-										</div>
+					<table style="float: left;">
+						<tr>
+							<td>
+								<div class="carousel-container-left">
+									<i class="fas fa-arrow-left" id="prevBtn1"></i>
+									<i class="fas fa-arrow-right" id="nextBtn1"></i>
+									<div class="carousel-slide-left">
+										<img src="images/Dog%20Identifier%20Photos/Corrections.png" alt="" id="lastClone1">
+										<img src="images/Dog%20Identifier%20Photos/Results.png" alt="">
+										<img src="images/Dog%20Identifier%20Photos/Results2.png" alt="">
+										<img src="images/Dog%20Identifier%20Photos/Corrections.png" alt="">
+										<img src="images/Dog%20Identifier%20Photos/Results.png" alt="" id="firstClone1">
 									</div>
 								</div>
-								</td>
-							</tr>
-						</table>
-						<table>
-							<tr>
-								<td>An Android application that determines dog breed from a dog picture
-									taken from the user's camera or selected from their gallery.</td>
-							</tr>
-							<tr>
-								<td>Skills:</td>
-							</tr>
-							<tr>
-								<td><ul>
-									<li>Programming Language - Java</li>
-									<li>Android Studio</li>
-									<li>SQLite Database</li>
-									<li>Accessing the Gallery</li>
-									<li>Accessing the Camera</li>
-									<li>HTTP GET and POST</li>
-								</ul></td>
-							</tr>
-							<tr>
-								<td>
-									<a href="https://github.com/COSC481W-2020Fall/cosc481w-581-2020-fall-convoluted-classifiers" class="proj-button">Check Out Code</a>
-
-									<!--									<a href="https://github.com/COSC481W-2020Fall/cosc481w-581-2020-fall-convoluted-classifiers">
-                                                                            <button class="proj-button">Check Out Code</button>
-                                                                        </a>-->
-								</td>
-							</tr>
-						</table>
+							</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>An Android application that determines dog breed from a dog picture
+								taken from the user's camera or selected from their gallery.</td>
+						</tr>
+						<tr>
+							<td>Skills:</td>
+						</tr>
+						<tr>
+							<td><ul>
+								<li>Programming Language - Java</li>
+								<li>Android Studio</li>
+								<li>SQLite Database</li>
+								<li>Accessing the Gallery (Android)</li>
+								<li>Accessing the Camera (Android)</li>
+								<li>HTTP GET and POST</li>
+							</ul></td>
+						</tr>
+					</table>
+					<a href="https://github.com/COSC481W-2020Fall/cosc481w-581-2020-fall-convoluted-classifiers" class="proj-button">Check Out Code</a>
 				</div>
 
 				<div class="proj-section-right">
 					<h3>Minesweeper Desktop Application</h3>
-					<div class="slider-align-right">
-						<div class="slider-right">
-							<div class="slides-right">
-								<input type="radio" name="radio-btn" id="radio4">
-								<input type="radio" name="radio-btn" id="radio5">
-								<input type="radio" name="radio-btn" id="radio6">
-
-								<div class="slide-right first">
-									<img src="images/Minesweeper/MSMain.PNG" alt="">
-								</div>
-								<div class="slide-right">
-									<img src="images/Minesweeper/MSLose.PNG" alt="">
-								</div>
-								<div class="slide-right">
-									<img src="images/Minesweeper/MSLose2.PNG" alt="">
-								</div>
-
-								<div class="navigation-manual">
-									<label for="radio4" class="slider-btn"></label>
-									<label for="radio5" class="slider-btn"></label>
-									<label for="radio6" class="slider-btn"></label>
-								</div>
-							</div>
+					<div class="carousel-container-right">
+						<i class="fas fa-arrow-left" id="prevBtn2"></i>
+						<i class="fas fa-arrow-right" id="nextBtn2"></i>
+						<div class="carousel-slide-right">
+							<img src="images/Minesweeper/MSLose2.PNG" alt="" id="lastClone2">
+							<img src="images/Minesweeper/MSMain.PNG" alt="">
+							<img src="images/Minesweeper/MSLose.PNG" alt="">
+							<img src="images/Minesweeper/MSLose2.PNG" alt="">
+							<img src="images/Minesweeper/MSMain.PNG" alt="" id="firstClone2">
 						</div>
 					</div>
 					<table style="padding-top: 10px;">
@@ -146,6 +111,7 @@
 							</ul></td>
 						</tr>
 					</table>
+					<br><br>
 					<a href="https://github.com/CouchK/MinesweeperProj" class="proj-button">Check Out Code</a>
 				</div>
 			</div>
@@ -168,5 +134,6 @@
 			</ul>
 		</section>
 	</div>
+	<script src="assets/js/main.js"></script>
 </body>
 </html>
