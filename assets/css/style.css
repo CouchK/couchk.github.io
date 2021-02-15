@@ -28,7 +28,7 @@ p { text-align: center; }
     scroll-behavior: smooth;
 
     /* Snap Effect */
-    scroll-snap-type: y mandatory;
+    /*scroll-snap-type: y mandatory;*/
 }
 
 /* Navigation Bar */
