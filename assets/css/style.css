@@ -4,7 +4,8 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: 'Poppins', sans-serif;
     background: #e8e9ec;
     color: black;
     line-height: 1.6;
@@ -33,7 +34,7 @@ p { text-align: center; }
 
 /* Navigation Bar */
 nav {
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 1;
     width: 100%;
@@ -42,7 +43,6 @@ nav {
     align-content: center;
     min-height: 8vh;
     background: rgba(0,0,0,0.7);
-    font-family: 'Poppins', sans-serif;
 }
 
 .nav-links {
