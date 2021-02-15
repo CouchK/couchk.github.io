@@ -1,115 +1,139 @@
 <!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<script src="https://kit.fontawesome.com/dfe0d8e5ae.js" crossorigin="anonymous"></script>
+</head>
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<h1><strong>Karen Couch</strong></h1>
-					<p>Hello! I am a recent graduate from Eastern Michigan University with a bachelor degree in Computer Science. Check out some of my recent
-						projects.</p>
+<body>
+	<div class="container">
+		<nav class="navbar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#resume">Resume</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- Section 1 -->
+		<section id="home">
+			<h1>Karen Couch</h1>
+			<p>I am a recent graduate from Eastern Michigan University with a bachelor degree in Computer Science.</p>
+
+			<ul class="icons">
+				<li><a href="mailto:karencouch97@gmail.com?subject=Website%20Inquiry"><i class="far fa-envelope"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/karen-couch-8445861b3/"><i class="fab fa-linkedin"></i></a></li>
+				<li><a href="https://github.com/CouchK"><i class="fab fa-github"></i></a></li>
+			</ul>
+		</section>
+
+		<!-- Section 2 -->
+		<section id="projects">
+			<h2>Recent Projects</h2>
+			<div class="proj-container">
+				<div class="proj-section-left">
+					<h3>Dog Breed Detector Android Application</h3>
+					<table style="float: left;">
+						<tr>
+							<td>
+								<div class="carousel-container-left">
+									<i class="fas fa-arrow-left" id="prevBtn1"></i>
+									<i class="fas fa-arrow-right" id="nextBtn1"></i>
+									<div class="carousel-slide-left">
+										<img src="images/Dog%20Identifier%20Photos/Corrections.png" alt="" id="lastClone1">
+										<img src="images/Dog%20Identifier%20Photos/Results.png" alt="">
+										<img src="images/Dog%20Identifier%20Photos/Results2.png" alt="">
+										<img src="images/Dog%20Identifier%20Photos/Corrections.png" alt="">
+										<img src="images/Dog%20Identifier%20Photos/Results.png" alt="" id="firstClone1">
+									</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>An Android application that determines dog breed from a dog picture
+								taken from the user's camera or selected from their gallery.</td>
+						</tr>
+						<tr>
+							<td>Skills:</td>
+						</tr>
+						<tr>
+							<td><ul>
+								<li>Programming Language - Java</li>
+								<li>Android Studio</li>
+								<li>SQLite Database</li>
+								<li>Accessing the Gallery (Android)</li>
+								<li>Accessing the Camera (Android)</li>
+								<li>HTTP GET and POST</li>
+							</ul></td>
+						</tr>
+					</table>
+					<a href="https://github.com/COSC481W-2020Fall/cosc481w-581-2020-fall-convoluted-classifiers" class="proj-button">Check Out Code</a>
 				</div>
-			</header>
 
-		<!-- Main -->
-			<div id="main">
-
-				<!-- One -->
-				<section id="one">
-					<h2>Recent Work</h2>
-					<div class="row">
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="images/Dog Identifier Photos/Results.PNG" class="image fit thumb"><img src="images/Dog%20Identifier%20Photos/DogCover.png" alt="Woman taking picture of a dog." width="1200px" height="250px"/></a>
-							<h3>Dog Breed Detector</h3>
-							<p>An Android application that implements AI to determine a dog breed from a dog picture taken from their camera or selected from the gallery.</p><br>
-							<p>Skills Used:</p>
-							<ul>
-								<li>Java (Mobile App Development)</li>
-								<li>SQLite</li>
-								<li>Python</li>
-							</ul>
-							<ul class="actions">
-								<li><a href="https://github.com/COSC481W-2020Fall/cosc481w-581-2020-fall-convoluted-classifiers" class="button">Check it out</a></li>
-							</ul>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/Minesweeper/Placeholder.png" alt="" width="1200px" height="250px"/></a>
-							<h3>Minesweeper (In Progress)</h3>
-							<p>An desktop application that allows a user to play a game of minesweeper and will save their highest score.</p><br>
-<!--							<p>Skills Used:</p>
-							<ul>
-								<li>C#</li>
-							</ul>
-							<ul class="actions">
-								<li><a href="https://github.com/COSC481W-2020Fall/cosc481w-581-2020-fall-convoluted-classifiers" class="button">Check it out</a></li>
-							</ul>-->
-						</article>
-					</div>
-<!--					<div class="scroll-icon">
-						<ul class="labeled-icons">
-							<a href="#two"><h3 class="fas fa-arrow-circle-down"></h3></a>
-						</ul>
-					</div>-->
-				</section>
-
-        <!-- Two -->
-				<section id="two">
-					<h2>Resume</h2>
-					<ul class="actions">
-						<li><a href="Karen Couch Resume.pdf" class="button">View Resume PDF</a></li>
-					</ul>
-<!--					<div class="scroll-icon">
-						<ul class="labeled-icons">
-							<a href="#three"><h3 class="far fa-arrow-alt-circle-down"></h3></a>
-						</ul>
-					</div>-->
-				</section>
-
-				<!-- Three -->
-				<section id="three">
-					<h2>Get In Touch</h2>
-					<div class="row">
-						<div class="col-8 col-12-small">
-							<ul class="labeled-icons">
-								<li><h3 class="icon solid fa-envelope"><span class="label">Email</span></h3><a class="two" href="mailto:karencouch97@gmail.com?subject = Website Inquiry">karencouch97@gmail.com</a></li>
-								<li><h3 class="icon brands fa-linkedin"><span class="label">Linkedin</span></h3><a class="two" href="https://www.linkedin.com/in/karen-couch-8445861b3/">Karen Couch</a></li>
-							</ul>
+				<div class="proj-section-right">
+					<h3>Minesweeper Desktop Application</h3>
+					<div class="carousel-container-right">
+						<i class="fas fa-arrow-left" id="prevBtn2"></i>
+						<i class="fas fa-arrow-right" id="nextBtn2"></i>
+						<div class="carousel-slide-right">
+							<img src="images/Minesweeper/MSLose2.PNG" alt="" id="lastClone2">
+							<img src="images/Minesweeper/MSMain.PNG" alt="">
+							<img src="images/Minesweeper/MSLose.PNG" alt="">
+							<img src="images/Minesweeper/MSLose2.PNG" alt="">
+							<img src="images/Minesweeper/MSMain.PNG" alt="" id="firstClone2">
 						</div>
 					</div>
-				</section>
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="mailto:karencouch97@gmail.com?subject = Website Inquiry" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						<li><a href="https://www.linkedin.com/in/karen-couch-8445861b3/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-						<li><a href="https://github.com/CouchK" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy;2020</li>
-					</ul>
+					<table style="padding-top: 10px;">
+						<tr>
+							<td colspan="2">An desktop application that allows a user to play a game of minesweeper.</td>
+						</tr>
+						<tr>
+							<td>Skills:</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><ul>
+								<li>Programming Language - C#</li>
+								<li>Inheritance</li>
+								<li>2D Arrays</li>
+							</ul></td>
+							<td><ul>
+								<li style="display: none;"></li>
+								<li>Icons</li>
+								<li>Timers</li>
+							</ul></td>
+						</tr>
+					</table>
+					<br><br>
+					<a href="https://github.com/CouchK/MinesweeperProj" class="proj-button">Check Out Code</a>
 				</div>
-			</footer>
+			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-	</body>
+		<!-- Section 3 -->
+		<section id="resume">
+			<h2>Resume</h2>
+			<div class="button">
+				<a href="Karen%20Couch%20Resume.pdf">View Resume PDF</a>
+			</div>
+		</section>
+
+		<!-- Section 4 -->
+		<section id="contact">
+			<h2>Get in Touch</h2>
+			<ul class="labeled-icons">
+				<li><a href="mailto:karencouch97@gmail.com?subject=Website%20Inquiry"><i class="far fa-envelope"> Karencouch97@gmail.com</i></a></li>
+				<li><a href="https://www.linkedin.com/in/karen-couch-8445861b3/"><i class="fab fa-linkedin"> Karen Couch</i></a></li>
+			</ul>
+		</section>
+	</div>
+	<script src="assets/js/main.js"></script>
+</body>
 </html>

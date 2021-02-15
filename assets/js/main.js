@@ -1,117 +1,81 @@
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+const carouselSlideLeft = document.querySelector('.carousel-slide-left');
+const carouselImagesLeft = document.querySelectorAll('.carousel-slide-left img');
+const carouselSlideRight = document.querySelector('.carousel-slide-right');
+const carouselImagesRight = document.querySelectorAll('.carousel-slide-right img');
 
-(function($) {
+//Buttons
+const prevBtnLeft = document.querySelector('#prevBtn1');
+const nextBtnLeft = document.querySelector('#nextBtn1');
+const prevBtnRight = document.querySelector('#prevBtn2');
+const nextBtnRight = document.querySelector('#nextBtn2');
 
-	var $window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$footer = $('#footer'),
-		$main = $('#main'),
-		settings = {
+//Counters
+let counterLeft = 1;
+let counterRight = 1;
+const sizeLeft = carouselImagesLeft[0].clientWidth;
+const sizeRight = carouselImagesRight[0].clientWidth;
 
-			// Parallax background effect?
-				parallax: true,
+carouselSlideLeft.style.transform = 'translateX(' + (-sizeLeft * counterLeft) + 'px)';
+carouselSlideRight.style.transform = 'translateX(' + (-sizeRight * counterRight) + 'px)';
 
-			// Parallax factor (lower = more intense, higher = less intense).
-				parallaxFactor: 20
+/* Carousel Left Event Listeners */
+nextBtnLeft.addEventListener('click', () => {
+    if(counterLeft >= carouselImagesLeft.length - 1) return;
+    carouselSlideLeft.style.transition = 'transform 0.4s ease-in-out';
+   counterLeft++;
+   carouselSlideLeft.style.transform = 'translateX(' + (-sizeLeft * counterLeft) + 'px)';
+});
 
-		};
+prevBtnLeft.addEventListener('click', () => {
+    if(counterLeft <= 0) return;
+    carouselSlideLeft.style.transition = 'transform 0.4s ease-in-out';
+    counterLeft--;
+    carouselSlideLeft.style.transform = 'translateX(' + (-sizeLeft * counterLeft) + 'px)';
+});
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:  [ '1281px',  '1800px' ],
-			large:   [ '981px',   '1280px' ],
-			medium:  [ '737px',   '980px'  ],
-			small:   [ '481px',   '736px'  ],
-			xsmall:  [ null,      '480px'  ],
-		});
+carouselSlideLeft.addEventListener('transitionend', () => {
+    if(carouselImagesLeft[counterLeft].id === 'lastClone1')
+    {
+        carouselSlideLeft.style.transition = 'none';
+        counterLeft = carouselImagesLeft.length - 2;
+        carouselSlideLeft.style.transform = 'translateX(' + (-sizeLeft * counterLeft) + 'px)';
+    }
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+    if(carouselImagesLeft[counterLeft].id === 'firstClone1')
+    {
+        carouselSlideLeft.style.transition = 'none';
+        counterLeft = carouselImagesLeft.length - counterLeft;
+        carouselSlideLeft.style.transform = 'translateX(' + (-sizeLeft * counterLeft) + 'px)';
+    }
+});
 
-	// Touch?
-		if (browser.mobile) {
+/* Carousel Right Event Listeners */
+nextBtnRight.addEventListener('click', () => {
+    if(counterRight >= carouselImagesRight.length - 1) return;
+    carouselSlideRight.style.transition = 'transform 0.6s ease-in-out';
+    counterRight++;
+    carouselSlideRight.style.transform = 'translateX(' + (-sizeRight * counterRight) + 'px)';
+});
 
-			// Turn on touch mode.
-				$body.addClass('is-touch');
+prevBtnRight.addEventListener('click', () => {
+    if(counterRight <= 0) return;
+    carouselSlideRight.style.transition = 'transform 0.6s ease-in-out';
+    counterRight--;
+    carouselSlideRight.style.transform = 'translateX(' + (-sizeRight * counterRight) + 'px)';
+});
 
-			// Height fix (mostly for iOS).
-				window.setTimeout(function() {
-					$window.scrollTop($window.scrollTop() + 1);
-				}, 0);
+carouselSlideRight.addEventListener('transitionend', () => {
+    if(carouselImagesRight[counterRight].id === 'lastClone2')
+    {
+        carouselSlideRight.style.transition = 'none';
+        counterRight = carouselImagesRight.length - 2;
+        carouselSlideRight.style.transform = 'translateX(' + (-sizeRight * counterRight) + 'px)';
+    }
 
-		}
-
-	// Footer.
-		breakpoints.on('<=medium', function() {
-			$footer.insertAfter($main);
-		});
-
-		breakpoints.on('>medium', function() {
-			$footer.appendTo($header);
-		});
-
-	// Header.
-
-		// Parallax background.
-
-			// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-				if (browser.name == 'ie'
-				||	browser.mobile)
-					settings.parallax = false;
-
-			if (settings.parallax) {
-
-				breakpoints.on('<=medium', function() {
-
-					$window.off('scroll.strata_parallax');
-					$header.css('background-position', '');
-
-				});
-
-				breakpoints.on('>medium', function() {
-
-					$header.css('background-position', 'left 0px');
-
-					$window.on('scroll.strata_parallax', function() {
-						$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
-					});
-
-				});
-
-				$window.on('load', function() {
-					$window.triggerHandler('scroll');
-				});
-
-			}
-
-	// Main Sections: Two.
-
-		// Lightbox gallery.
-			$window.on('load', function() {
-
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
-			});
-
-})(jQuery);
+    if(carouselImagesRight[counterRight].id === 'firstClone2')
+    {
+        carouselSlideRight.style.transition = 'none';
+        counterRight = carouselImagesRight.length - counterRight;
+        carouselSlideRight.style.transform = 'translateX(' + (-sizeRight * counterRight) + 'px)';
+    }
+});
