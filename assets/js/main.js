@@ -1,48 +1,95 @@
-let slidePosition = 0;
-const slides = document.getElementsByClassName('carousel-image');
-const totalSlides = slides.length;
+let slidePosition1 = 0;
+let slidePosition2 = 0;
+const slides1 = document.getElementsByClassName('carousel-image1');
+const slides2 = document.getElementsByClassName('carousel-image2');
+const totalSlides1 = slides1.length;
+const totalSlides2 = slides2.length;
 
-document.getElementById('carousel-next-btn').addEventListener("click", function() {
-   moveToNextSlide();
+document.getElementById('carousel-next-btn1').addEventListener("click", function() {
+   moveToNextSlide(1);
 });
 
-document.getElementById('carousel-prev-btn').addEventListener("click", function() {
-    moveToPrevSlide();
+document.getElementById('carousel-prev-btn1').addEventListener("click", function() {
+    moveToPrevSlide(1);
 });
 
-function updateSlidePosition()
-{
-    for(let slide of slides)
-    {
-        slide.classList.remove('carousel-image-visible');
-        slide.classList.add('carousel-image-hidden');
-    }
+document.getElementById('carousel-next-btn2').addEventListener("click", function() {
+    moveToNextSlide(2);
+});
 
-    slides[slidePosition].classList.add('carousel-image-visible');
-}
+document.getElementById('carousel-prev-btn2').addEventListener("click", function() {
+    moveToPrevSlide(2);
+});
 
-function moveToNextSlide()
+function updateSlidePosition(num)
 {
-    //Last image of carousel
-    if(slidePosition === totalSlides - 1)
+    if(num === 1)
     {
-        slidePosition = 0;
+        for (let slide of slides1)
+        {
+            slide.classList.remove('carousel-image-visible1');
+            slide.classList.add('carousel-image-hidden1');
+        }
+        slides1[slidePosition1].classList.add('carousel-image-visible1');
     }
     else {
-        slidePosition++;
+        for (let slide2 of slides2)
+        {
+            slide2.classList.remove('carousel-image-visible2');
+            slide2.classList.add('carousel-image-hidden2');
+        }
+        slides2[slidePosition2].classList.add('carousel-image-visible2');
     }
-    updateSlidePosition();
 }
 
-function moveToPrevSlide()
+function moveToNextSlide(num)
 {
-    //First image of carousel
-    if(slidePosition === 0)
+    if(num === 1)
     {
-        slidePosition = totalSlides - 1;
+        //Last image of carousel
+        if(slidePosition1 === totalSlides1 - 1)
+        {
+            slidePosition1 = 0;
+        }
+        else {
+            slidePosition1++;
+        }
+        updateSlidePosition(1);
     }
-    else {
-        slidePosition--;
+    else
+    {
+        if(slidePosition2 === totalSlides2 - 1)
+        {
+            slidePosition2 = 0;
+        }
+        else {
+            slidePosition2++;
+        }
+        updateSlidePosition(2);
+    }
+}
+
+function moveToPrevSlide(num)
+{
+    if(num === 1)
+    {
+        //First image of carousel
+        if (slidePosition1 === 0)
+        {
+            slidePosition1 = totalSlides1 - 1;
+        } else {
+            slidePosition1--;
+        }
+    }
+    else
+    {
+        if(slidePosition2 === 0)
+        {
+            slidePosition2 = totalSlides2 - 1;
+        }
+        else {
+            slidePosition2--;
+        }
     }
     updateSlidePosition();
 }

@@ -246,12 +246,12 @@ ul.labeled-icons i {
 
 #projects .project-info {
     padding: 30px;
-    flex-basis: 50%;
+    flex-basis: 80%;
     background-color: white;
     height: 100%;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: left;
     flex-direction: column;
 }
 
@@ -266,26 +266,48 @@ ul.labeled-icons i {
     margin-top: 10px;
 }
 
+#projects .project-image {
+    padding-left: 7%;
+    padding-right: 100px;
+}
+
 
 /* Project Carousel */
 .carousel {
     overflow: hidden;
     max-width: 600px;
     position: relative;
+    padding-right: 15px;
 }
 
-.carousel .carousel-image,
-.carousel .carousel-image-hidden {
+.carousel .carousel-image1,
+.carousel .carousel-image-hidden1 {
     display: none;
 }
 
-.carousel .carousel-image img{
+.carousel .carousel-image1 img{
     max-width: 600px;
     width: 100%;
     height: auto;
 }
 
-.carousel .carousel-image-visible {
+.carousel .carousel-image2,
+.carousel .carousel-image-hidden2 {
+    display: none;
+}
+
+.carousel .carousel-image2 img{
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+.carousel .carousel-image-visible1 {
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+
+.carousel .carousel-image-visible2 {
     display: block;
     animation: fadeVisibility 0.5s;
 }
@@ -310,11 +332,19 @@ ul.labeled-icons i {
     color: white;
 }
 
-.carousel .carousel-actions button#carousel-prev-btn {
+.carousel .carousel-actions button#carousel-prev-btn1 {
     margin-left: 20px;
 }
 
-.carousel .carousel-actions button#carousel-next-btn {
+.carousel .carousel-actions button#carousel-next-btn1 {
+    margin-right: 20px;
+}
+
+.carousel .carousel-actions button#carousel-prev-btn2 {
+    margin-left: 20px;
+}
+
+.carousel .carousel-actions button#carousel-next-btn2 {
     margin-right: 20px;
 }
 
@@ -326,16 +356,6 @@ ul.labeled-icons i {
         opacity: 1;
     }
 }
-
-/*#projects .carousel-image {
-    display: flex;
-    flex-basis: 50%;
-    overflow: hidden;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-}*/
 
 img {
     border: 1px solid black;
