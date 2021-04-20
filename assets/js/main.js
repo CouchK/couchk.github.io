@@ -80,6 +80,7 @@ function moveToPrevSlide(num)
         } else {
             slidePosition1--;
         }
+        updateSlidePosition(1);
     }
     else
     {
@@ -90,8 +91,8 @@ function moveToPrevSlide(num)
         else {
             slidePosition2--;
         }
+        updateSlidePosition(2);
     }
-    updateSlidePosition();
 }
 
 
